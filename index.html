@@ -13,21 +13,21 @@
       <a-assets>
          
         
-           <video src="./fmsol.mp4"
+<!--            <video src="./fmsol.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop  
                 crossorigin webkit-playsinline autoplay="false" playsinline>
-            </video>
-        <img id="btninsta" src="./pain.jpg" crossorigin="anonymous">
-        <img id="btnphone" src="./call.png" crossorigin="anonymous">
+            </video> -->
+        <img id="btninsta" src="./insta.png" crossorigin="anonymous">
+       <img id="btnyt" src="./yt.png" crossorigin="anonymous">
+        <img id="btnphone" src="./ph.png" crossorigin="anonymous">
 
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable"></a-camera>
 
       <a-entity id="example-target" mindar-image-target="targetIndex: 0">
         
-          <a-video id="example-plane" class="clickable" src="#vid" position='0 0 0' rotation='0 0 0' width='1.5' height='1'>
-            </a-video>
-        <a-entity id="playbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #play; opacity: 1; transparent: true;"></a-entity>  
+<!--           <a-video id="example-plane" class="clickable" src="#vid" position='0 0 0' rotation='0 0 0' width='1.5' height='1'>            </a-video> -->
+        <a-entity id="yt_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #btnyt; opacity: 1; transparent: true;"></a-entity>  
         <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 -0.9 0" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
     <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0" rotation="0 0 0" material="src: #btnphone; opacity: 1; transparent: true;"></a-entity>
        
@@ -47,20 +47,26 @@
         console.log("target lost");
       });
 
-       const examplePlane = document.querySelector('#playbtn');
-       examplePlane.addEventListener("click", event => {
-        document.querySelector("#vid").play();
-        examplePlane.remove();
-       });
+       // const examplePlane = document.querySelector('#playbtn');
+       // examplePlane.addEventListener("click", event => {
+       //  document.querySelector("#vid").play();
+       //  examplePlane.remove();
+       // });
 
         const insta_click = document.querySelector('#insta_click');
         insta_click.addEventListener("click", event => {
-       window.location.href = "https://instagram.com/fmullasol";
+       window.location.href = "https://www.instagram.com/tanishshah1210?igsh=MTV3MHE2Zm5mZDk1bQ==";
+       });
+
+
+      const insta_click = document.querySelector('#yt_click');
+        insta_click.addEventListener("click", event => {
+       window.location.href = "https://youtube.com.com/";
        });
       
        const call_click = document.querySelector('#call_click');
         call_click.addEventListener("click", event => {
-       window.location.href = "elt:+9426983936";
+       window.location.href = "elt:+91 6353653422";
        })
 
 
